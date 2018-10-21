@@ -1,6 +1,11 @@
 {{ define "main" }}
 <main class="main" role="main">
 	<article class="post">
+		{{- if .Params.thumbnail }}
+		<figure class="post__thumbnail">
+			<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}">
+		</figure>
+		{{- end }}
 		<header class="post__header">
 			<h1 class="post__title">{{ .Title }}</h1>
 			{{- with .Params.lead }}
@@ -10,13 +15,8 @@
 			<div class="post__meta meta">{{ . }}</div>
 			{{- end }}
 		</header>
-		{{- if .Params.thumbnail }}
-		<figure class="post__thumbnail">
-			<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}">
-		</figure>
-		{{- end }}
-		{{- partial "post_toc.html" . -}}
 		<div class="content post__content clearfix">
+			{{- partial "post_toc.html" . -}}
 			{{ .Content }}
 		</div>
 		{{ partial "post_tags.html" . }}
