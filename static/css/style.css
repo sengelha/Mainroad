@@ -607,12 +607,12 @@ select {
 
 .post__thumbnail {
 	float: left;
-	margin: 0 20px 0 0;
+	margin: 5px 20px 5px 0;
 }
 
 .post__thumbnail img {
 	width: 100%;
-	max-width: 235px;
+	max-width: 140px;
 }
 
 .post__toc {
@@ -829,12 +829,12 @@ select {
 
 .list__thumbnail {
 	float: left;
-	margin: 0 20px 0 0;
+	margin: 5px 20px 5px 0;
 }
 
 .list__thumbnail img {
 	width: 100%;
-	max-width: 180px;
+	max-width: 100px;
 }
 
 .list__footer-readmore {
